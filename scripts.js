@@ -2,8 +2,6 @@ class Calculator {
   constructor(previousOperandTextElement, currentOperandTextElement) {
     this.previousOperandTextElement = previousOperandTextElement;
     this.currentOperandTextElement = currentOperandTextElement;
-    console.log({ previousOperandTextElement, currentOperandTextElement });
-
     this.clear();
   }
 
@@ -13,7 +11,7 @@ class Calculator {
     this.operation = undefined;
   }
 
-  delete(button) {
+  delete() {
     this.currentOperand = this.currentOperand.toString().slice(0, -1);
   }
 
@@ -46,7 +44,7 @@ class Calculator {
         computation = prev - current;
         break;
 
-      case "&divide;":
+      case "÷":
         computation = prev / current;
         break;
 
