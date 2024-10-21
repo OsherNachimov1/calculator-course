@@ -74,7 +74,7 @@ class Calculator {
       });
     }
 
-    if (decimalDigits !== null) {
+    if (decimalDigits) {
       return `${integerDisplay}.${decimalDigits}`;
     } else {
       return integerDisplay;
@@ -86,9 +86,7 @@ class Calculator {
       this.currentOperand
     );
 
-    console.log({ kaki: this.currentOperandTextElement.innerHTML });
-
-    if (this.operation !== null) {
+    if (this.operation) {
       this.previousOperandTextElement.innerHTML = `${this.getDisplayNumber(
         this.previousOperand
       )} ${this.operation}`;
